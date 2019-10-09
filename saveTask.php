@@ -12,13 +12,14 @@
 
        if(!$result)
        {
-           echo "query fail";
+        $_SESSION['Message'] = "Error saving the new task";
+        $_SESSION['Message_type'] = "danger";
        }
        else
        {
            $_SESSION['Message'] = "saved task successful";
            $_SESSION['Message_type'] = "success";
-           header("Location: index.php");
        }
+       header("Location: index.php");
     }
 ?>
