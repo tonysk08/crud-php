@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/a56554cd6b.js" crossorigin="anonymous"></script>
         <title>Crud PHP</title>
     </head>
     <body>
