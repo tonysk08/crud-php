@@ -1,22 +1,20 @@
 <?php
     include("model\pool.php");
+    include("include\header.php");
 
     if(isset($_GET['id']))
     {
-        $id = $_GET['id'];
-        //$query = "DELETE FROM task where id=$id";
-        //$result=mysqli_query($conn,$query);
+        $id=$_GET['id'];
 
-        if(!$result)
+        $query = "SELECT * FROM task WHERE id=$id";
+        $result = mysqli_query($conn,$query);
+        if(mysqli_num_rows($result)==1)
         {
-            $_SESSION['Message'] = "Error Editing the task";
-            $_SESSION['Message_type'] = "danger";
+            $row=mysqli_fetch_array($result);
+            echo $row['title'];
         }
-        else
-        {
-            $_SESSION['Message'] = "Editing task successful";
-            $_SESSION['Message_type'] = "success";
-        }
-        header("Location: index.php");
     }
 ?>
+
+
+<?php include("include\Footer.php"); ?>
