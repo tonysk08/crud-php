@@ -8,10 +8,27 @@
 
         $query = "SELECT * FROM task WHERE id=$id";
         $result = mysqli_query($conn,$query);
+        $row=mysqli_fetch_array($result);
+
         if(mysqli_num_rows($result)==1)
-        {
-            $row=mysqli_fetch_array($result);
-            echo $row['title'];
+        {?>
+
+        <div class="container p-4">
+            <div class="col-md-6">
+                <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                        <th scope="col" style="text-align:center;">Edition</th>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+            </div>
+        </div>
+
+<?php
+            //echo $row['title'];
         }
     }
 ?>
